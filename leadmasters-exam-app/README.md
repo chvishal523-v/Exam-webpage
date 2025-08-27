@@ -65,6 +65,6 @@ MIT
 
 ## Author
 **ChingitamVishal**
-- GitHub:[]
+- GitHub:[https://github.com/chvishal523-v]
 - linkdin:[http://linkedin.com/in/vishal-chingitam]
 - email:[ch.vishal523@gmail.com]
