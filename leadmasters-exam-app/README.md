@@ -66,4 +66,5 @@ MIT
 ## Author
 **ChingitamVishal**
 - GitHub:[]
-- Token expiry 8h
+- linkdin:[http://linkedin.com/in/vishal-chingitam]
+- email:[ch.vishal523@gmail.com]
