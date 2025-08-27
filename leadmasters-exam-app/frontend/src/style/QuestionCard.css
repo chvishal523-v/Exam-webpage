@@ -1,0 +1,77 @@
+.question-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.question-card:hover {
+  transform: translateY(-2px);
+}
+
+.question-text {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+}
+
+/* Options Grid */
+.options {
+  display: grid;
+  gap: 12px;
+}
+
+/* Each option */
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  background: #f9fafb;
+}
+
+.option input {
+  display: none; /* hide default radio */
+}
+
+.option span {
+  flex: 1;
+}
+
+/* Hover */
+.option:hover {
+  background: #f3f4f6;
+  border-color: #2563eb;
+}
+
+/* Selected */
+.option.selected {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .question-card {
+    padding: 16px;
+  }
+
+  .question-text {
+    font-size: 1rem;
+  }
+
+  .option {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+}

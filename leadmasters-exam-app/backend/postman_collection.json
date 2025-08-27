@@ -1,0 +1,95 @@
+{
+  "info": {
+    "name": "LeadMasters Exam API",
+    "_postman_id": "leadmasters-exam-collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{BASE_URL}}/api/health"
+      }
+    },
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"username\": \"testuser\", \"email\": \"test@example.com\", \"password\": \"secret123\"}"
+        },
+        "url": "{{BASE_URL}}/api/auth/register"
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"emailOrUsername\": \"test@example.com\", \"password\": \"secret123\"}"
+        },
+        "url": "{{BASE_URL}}/api/auth/login"
+      }
+    },
+    {
+      "name": "Start Exam",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{TOKEN}}"
+          }
+        ],
+        "url": "{{BASE_URL}}/api/exam/start?limit=5"
+      }
+    },
+    {
+      "name": "Submit Exam",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{TOKEN}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"answers\": [{\"questionId\": \"PUT_ID\", \"selectedOption\": \"PUT_OPTION\"}]}"
+        },
+        "url": "{{BASE_URL}}/api/exam/submit"
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE_URL",
+      "value": "http://localhost:5000"
+    },
+    {
+      "key": "TOKEN",
+      "value": ""
+    }
+  ]
+}
